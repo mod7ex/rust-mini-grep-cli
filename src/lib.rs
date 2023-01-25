@@ -28,7 +28,7 @@ pub struct Config {
 
 impl Config {
     pub fn new(args: Vec<String>) -> Result<Self, &'static str> {
-        if args.len() != 3 && args.len() != 4 {
+        if args.len() != 3 {
             println!("[Usage] {} <$query> <$file_path>", &args[0]);
             return Err("Failed parsing arguments");
         }
